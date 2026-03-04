@@ -1,0 +1,180 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = false
+command_timeout = 4000
+
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$gleam\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$nats\
+$direnv\
+$env_var\
+$mise\
+$crystal\
+$custom\
+$sudo\
+$jobs\
+$battery\
+$status\
+$os\
+$container\
+$netns\
+$shell\
+$fill\
+$time\
+$line_break\
+$character"""
+
+# [username]
+# show_always = true
+# style_user = 'yellow'
+# format = 'tom($style)@'
+# disabled = false
+#
+# [hostname]
+# ssh_only = false
+
+[directory]
+format = '[󰉖 $path]($style)[$read_only]($read_only_style) '
+truncation_length = 1
+style = '#9eaaaa'
+# truncation_symbol = '…/'
+
+[character]
+success_symbol = '[❯](#c1D951)'
+# success_symbol = '[\$](#c1D951)'
+# success_symbol = '[▶](#c1D951)'
+error_symbol = '[❯](red)'
+# error_symbol = '[\$](red)'
+# error_symbol = '[▶](red)'
+
+[git_branch]
+# format =  'on [$branch(:$remote_branch)]($style) '
+# symbol = ' '
+# style = '#8585a1'
+# style = '#89ACBB'
+# style = 'blue'
+format = "on [$symbol $branch(:$remote_branch)]($style) "
+symbol = "[](#89ACBB)"
+style = "#89ACBB"
+# truncation_symbol = "⋯"
+# truncation_length = 23
+# ignore_branches = ["main", "master"]
+only_attached = true
+
+[git_state]
+style = 'yellow'
+
+# [git_metrics]
+# format = '[+$added]($added_style)[-$deleted]($deleted_style) '
+# added_style = 'green'
+# deleted_style = 'red'
+# disabled = false
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = '#A17877'
+# style = 'yellow'
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+untracked = '?${count}'
+stashed = '\$'
+modified = '!${count}'
+staged = '+${count}'
+renamed = '»${count}'
+deleted = '✘${count}'
+
+[nodejs]
+# format = 'via [$symbol($version )]($style)'
+format = '[($version )]($style)'
+# symbol = ' '
+style = '#83a598'
+# style = 'green'
+# disabled = true
+
+[php]
+# format = 'via [$symbol($version )]($style)'
+format = '[($version )]($style)'
+symbol = ' '
+style = '#729fcf'
+disabled = true
+
+[time]
+style = 'dimmed white'
+disabled = false
+format = '[$time]($style)'
+use_12hr = true
+time_format = '%R'
+
+[fill]
+symbol = ' '

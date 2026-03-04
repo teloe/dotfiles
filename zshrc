@@ -4,23 +4,28 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+
+export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
 # ZSH_THEME="typewritten"
-ZSH_THEME="custom"
+# ZSH_THEME="gitsome"
+# ZSH_THEME="aphrodite"
 
 # export TYPEWRITTEN_CURSOR="block"
-# export TYPEWRITTEN_PROMPT_LAYOUT="pure"
+# export TYPEWRITTEN_PROMPT_LAYOUT="half_pure"
 # export TYPEWRITTEN_RELATIVE_PATH="off"
 # export TYPEWRITTEN_DISABLE_RETURN_CODE=true
-# export TYPEWRITTEN_SYMBOL="->"
+# export TYPEWRITTEN_SYMBOL=""
 # export TYPEWRITTEN_SYMBOL=">"
 # export TYPEWRITTEN_ARROW_SYMBOL="on"
 # export TYPEWRITTEN_SYMBOL="#"
-# export TYPEWRITTEN_COLOR_MAPPINGS="primary:cyan;secondary:#b8b8b8"
+# export TYPEWRITTEN_COLOR_MAPPINGS="primary:red;secondary:#b8b8b8"
 
 # Aliases
 alias c="clear"
@@ -35,7 +40,14 @@ alias tls="tmux ls"
 alias tk="tmux kill-server"
 alias gw="gulp watch"
 alias k="v ~/.config/kitty/kitty.conf"
+alias gh="v ~/.config/ghostty/config"
 alias a="v ~/.alacritty.yml"
+alias dev="npm run dev"
+alias build="npm run build"
+
+# EZA
+alias e="eza -1 -a --icons --group-directories-first"
+alias el="eza -l -a -h --icons --group-directories-first --git"
 
 # Desktop Programs
 alias chrome="open -a google\ chrome"
@@ -144,3 +156,14 @@ source $ZSH/oh-my-zsh.sh
 # Set typewritten ZSH as a prompt
 # autoload -U promptinit; promptinit
 # prompt typewritten
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# nvm use lts/iron
+
+# eval "$(oh-my-posh init zsh)"
+# eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/powerlevel10k_modern.omp.json)"
+# source /opt/homebrew/opt/spaceship/spaceship.zsh
+
+eval "$(starship init zsh)"

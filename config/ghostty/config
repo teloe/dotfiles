@@ -1,0 +1,46 @@
+# ------ Cursor ------
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+
+# ------ Colors ------
+# background = 24364b
+# background = 2f3338
+# background = 29262F
+# background = 1e2426
+# background = 17191e
+foreground = ffffff
+
+
+# ------ Themes ------
+# theme = Calamity
+# theme = Belafonte Night
+# theme = Chalkboard
+# theme = Jubi
+
+
+# ------ Fonts ------
+# font-family = Cascadia Code SemiLight
+# font-family = Geist Mono
+# font-family = Spleen 12x24
+# font-family = ProFont for Powerline
+font-family = Operator Mono Book
+# font-family = JetBrains Mono Light
+# font-family = Berkeley Mono
+# font-family = Menlo
+
+# font-family-italic= JetBrains Mono Italic
+# font-family-bold-italic = JetBrains Mono Bold Italic
+
+font-size = 16
+
+# ------ Window ------
+# window-decoration = none
+window-theme = system
+macos-titlebar-style = native
+# window-padding-x = 2
+# macos-titlebar-proxy-icon = hidden
+# title = " "
+
+# adjust-cell-height = 50%

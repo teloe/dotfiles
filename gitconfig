@@ -1,5 +1,5 @@
 [user]
-    name  = Tom Eloe
+    name  = teloe
     email = tomeloe1@gmail.com
 
 [core]
@@ -22,6 +22,7 @@
     lg      = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lp      = log --pretty=oneline
     last    = log -1 HEAD
+    whichfiles = diff-tree --no-commit-id --name-only -r
 
 [init]
     defaultBranch = main
