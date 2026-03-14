@@ -5,15 +5,16 @@ local colors = {
 	fg = "#eeeeec",
 	gray = "#888a85",
 	yellow = "#e5f0ab",
+	darkred = "#875f5f",
 	dark_gray = "#444444",
 	comment = "#7585a3",
 	-- comment = "#627785",
 	cursor_line = "#2c3039",
 	selection = "#252028",
 	accent = "#5f92a0", -- Constant / Root Folder
-	-- keyword = "#996576",
-	-- keyword = "#875f5f",
-	keyword = "#a86c78",
+	-- keyword = "#999083",
+	keyword = "#875f5f",
+	-- keyword = "#a86c78",
 	string = "#9eaaaa",
 	operator = "#c1D951",
 	error = "#cc0000",
@@ -56,11 +57,12 @@ hl(0, "Constant", { fg = colors.accent })
 hl(0, "String", { fg = colors.string })
 hl(0, "Number", { fg = "#cd9965" })
 hl(0, "Identifier", { fg = "#ffffff" })
+-- hl(0, "Function", { fg = colors.keyword })
 hl(0, "Function", { fg = colors.keyword })
 hl(0, "Statement", { fg = "#ffffff", bold = true })
--- hl(0, "Keyword", { fg = "#736d99", bold = true })
+-- hl(0, "Keyword", { fg = "#a3a9ce" })
 hl(0, "Keyword", { fg = "#ffffff", bold = true })
--- hl(0, "Keyword", { fg = colors.yellow })
+-- hl(0, "Keyword", { fg = colors.keyword, bold = true })
 hl(0, "PreProc", { fg = "#ffffff" })
 hl(0, "Type", { fg = "#ffffff" })
 -- hl(0, "Type", { fg = colors.yellow })
@@ -82,9 +84,9 @@ hl(0, "NvimTreeWinSeparator", { fg = "#2b2b2b" })
 -- hl(0, "NvimTreeSpecialFile", { fg = "#ffffff" })
 hl(0, "NvimTreeExecFile", { fg = "#ffffff" })
 hl(0, "NvimTreeImageFile", { fg = "#C5A837" })
-hl(0, "GitSignsAdd", { fg = "#406742" })
+hl(0, "GitSignsAdd", { fg = "#80b083" })
 hl(0, "GitSignsChange", { fg = "Turquoise" })
-hl(0, "GitSignsDelete", { fg = "#82505E" })
+hl(0, "GitSignsDelete", { fg = "#c87779" })
 
 -- Language Specifics (HTML/CSS)
 -- hl(0, "htmlTag", { fg = colors.gray })
@@ -105,7 +107,7 @@ hl(0, "htmlTitle", { fg = "#aaaa77" })
 -- These will apply to HTML, Handlebars, JSX, etc.
 hl(0, "@tag", { fg = "#ffffff", bold = true }) -- <div>, <body>
 hl(0, "@tag.delimiter", { fg = "#888a85" }) -- <, >, />
-hl(0, "@tag.attribute", { fg = "#a86c78" }) -- class, id, href
+hl(0, "@tag.attribute", { fg = "#875f5f" }) -- class, id, href
 hl(0, "@tag.builtin", { fg = "#ffffff", bold = true }) -- standard tags
 hl(0, "@text.uri", { fg = "#729fcf", underline = true }) -- links inside tags
 

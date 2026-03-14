@@ -157,13 +157,10 @@ source $ZSH/oh-my-zsh.sh
 # autoload -U promptinit; promptinit
 # prompt typewritten
 
+eval "$(starship init zsh)"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# nvm use lts/iron
+# nvm use stable
 
-# eval "$(oh-my-posh init zsh)"
-# eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/powerlevel10k_modern.omp.json)"
-# source /opt/homebrew/opt/spaceship/spaceship.zsh
-
-eval "$(starship init zsh)"

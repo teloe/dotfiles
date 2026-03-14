@@ -41,4 +41,5 @@ require("lazy").setup({
 	require("plugins.copilot"),
 	require("plugins.flash"),
 	require("plugins.markdown"),
+	require("plugins.neogit"),
 })

@@ -1,1 +1,0 @@
-/Users/tomeloe/.dotfiles/config/nvim/lua/plugins/init.lua
