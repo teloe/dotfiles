@@ -42,4 +42,6 @@ require("lazy").setup({
 	require("plugins.flash"),
 	require("plugins.markdown"),
 	require("plugins.neogit"),
+	require("plugins.dashboard"),
+	require("plugins.surround"),
 })
