@@ -1,22 +1,20 @@
 return {
 	"github/copilot.vim",
 
-	-- Community Copilot Chat plugin for chat interface
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		branch = "main",
 		dependencies = {
-			{ "nvim-lua/plenary.nvim" }, -- Required utility library
-			{ "nvim-telescope/telescope.nvim" }, -- Optional, for better UI pickers
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-telescope/telescope.nvim" },
 		},
 		config = function()
 			require("CopilotChat").setup({
-				-- Your configuration options here (optional)
 				window = {
-					-- layout = "float", -- Use a floating window layout
-					width = 0.4, -- 75% of the screen width
+					-- layout = "float",
+					-- width = 0.4,
 				},
-				-- auto_insert_mode = true, -- Enter insert mode when opening chat
+				-- auto_insert_mode = true,
 				headers = {
 					user = " Tom ",
 					assistant = " Copilot ",

@@ -42,6 +42,7 @@ alias gw="gulp watch"
 alias k="v ~/.config/kitty/kitty.conf"
 alias gh="v ~/.config/ghostty/config"
 alias a="v ~/.alacritty.yml"
+alias d="v ~/.dotfiles/config/nvim/colors/drab.lua"
 alias dev="npm run dev"
 alias build="npm run build"
 

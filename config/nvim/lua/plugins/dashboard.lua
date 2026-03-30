@@ -37,6 +37,16 @@ return {
 						key = "d",
 					},
 				},
+				mru = {
+					limit = 6,
+					icon = "󰄉 ",
+					label = "Recent Files",
+				},
+				project = {
+					limit = 4,
+					icon = "󰉋 ",
+					label = "Projects",
+				},
 				footer = {
 					"                     ",
 					"⚡️ Neovim initialized",

@@ -78,7 +78,7 @@ hl(0, "DiagnosticInfo", { fg = colors.info, bg = "#26292c" })
 hl(0, "DiagnosticHint", { fg = colors.info, bg = "#26292c" })
 
 -- Plugins (NvimTree & GitSigns)
-hl(0, "NvimTreeNormal", { bg = "#121212" })
+hl(0, "NvimTreeNormal", { bg = "#1f2329" })
 hl(0, "NvimTreeRootFolder", { fg = colors.accent })
 hl(0, "NvimTreeWinSeparator", { fg = "#2b2b2b" })
 -- hl(0, "NvimTreeSpecialFile", { fg = "#ffffff" })
@@ -106,6 +106,7 @@ hl(0, "htmlTitle", { fg = "#aaaa77" })
 -- Modern TreeSitter Groups (The "Neovim Way")
 -- These will apply to HTML, Handlebars, JSX, etc.
 hl(0, "@tag", { fg = "#ffffff", bold = true }) -- <div>, <body>
+-- hl(0, "@tag", { fg = "#999083", bold = true }) -- <div>, <body>
 hl(0, "@tag.delimiter", { fg = "#888a85" }) -- <, >, />
 hl(0, "@tag.attribute", { fg = "#875f5f" }) -- class, id, href
 hl(0, "@tag.builtin", { fg = "#ffffff", bold = true }) -- standard tags

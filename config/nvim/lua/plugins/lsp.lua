@@ -238,16 +238,19 @@ return {
 			},
 
 			lua_ls = {
-				-- cmd = { ... },
-				-- filetypes = { ... },
-				-- capabilities = {},
 				settings = {
 					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							-- Make the server aware of Neovim runtime files
+							library = vim.api.nvim_get_runtime_file("", true),
+							checkThirdParty = false, -- Stops the "Do you want to configure your work environment?" popup
+						},
 						completion = {
 							callSnippet = "Replace",
 						},
-						-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-						-- diagnostics = { disable = { 'missing-fields' } },
 					},
 				},
 			},

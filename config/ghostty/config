@@ -8,9 +8,10 @@ shell-integration-features = no-cursor
 # background = 24364b
 # background = 2f3338
 # background = 29262F
-# background = 1e2426
+# background = 1f2329
 # background = 17191e
-foreground = ffffff
+# foreground = ffffff
+foreground = cccccc
 
 
 # ------ Themes ------
@@ -25,7 +26,8 @@ foreground = ffffff
 # font-family = Geist Mono
 # font-family = Spleen 12x24
 # font-family = ProFont for Powerline
-font-family = Operator Mono Book
+# font-family = Operator Mono Book
+font-family = SF Mono
 # font-family = JetBrains Mono Light
 # font-family = Berkeley Mono
 # font-family = Menlo
