@@ -26,16 +26,26 @@ foreground = cccccc
 # font-family = Geist Mono
 # font-family = Spleen 12x24
 # font-family = ProFont for Powerline
+# font-family = M PLUS Code Latin 60
+font-family = Monaspace Neon Frozen SemiWide Light
+# font-family = PP Model Mono
 # font-family = Operator Mono Book
-font-family = SF Mono
+# font-family = SF Mono
+# font-family = Iosevka Custom Light
+# font-family = Monoid Loose
+# font-family = Monoid
+# font-family = IBM Plex Mono Light
 # font-family = JetBrains Mono Light
 # font-family = Berkeley Mono
 # font-family = Menlo
 
-# font-family-italic= JetBrains Mono Italic
+# font-family-bold= IBM Plex Mono SemiBold
 # font-family-bold-italic = JetBrains Mono Bold Italic
 
 font-size = 16
+
+# adjust-cell-width = 15%
+# adjust-cell-height = 12
 
 # ------ Window ------
 # window-decoration = none
