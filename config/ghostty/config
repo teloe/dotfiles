@@ -1,33 +1,34 @@
-# ------ Cursor ------
+#--- Cursor ---
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
 
-# ------ Colors ------
+#--- Colors ---
 # background = 24364b
 # background = 2f3338
 # background = 29262F
-# background = 1f2329
+background = 1f2329
 # background = 17191e
 # foreground = ffffff
-foreground = cccccc
+foreground = b2b2b2
 
 
-# ------ Themes ------
+#--- Themes ---
 # theme = Calamity
 # theme = Belafonte Night
 # theme = Chalkboard
 # theme = Jubi
 
 
-# ------ Fonts ------
-# font-family = Cascadia Code SemiLight
+#--- Fonts ---
+# font-family = Cascadia Code Light
 # font-family = Geist Mono
 # font-family = Spleen 12x24
 # font-family = ProFont for Powerline
 # font-family = M PLUS Code Latin 60
-font-family = Monaspace Neon Frozen SemiWide Light
+# font-family = Monaspace Neon Light
+font-family = Monaspace Argon Light
 # font-family = PP Model Mono
 # font-family = Operator Mono Book
 # font-family = SF Mono
@@ -44,10 +45,18 @@ font-family = Monaspace Neon Frozen SemiWide Light
 
 font-size = 16
 
+
+#--- Texture healing ---
+font-feature = calt
+font-feature = liga
+font-feature = ss01
+font-feature = ss02
+
+
 # adjust-cell-width = 15%
 # adjust-cell-height = 12
 
-# ------ Window ------
+#--- Window ---
 # window-decoration = none
 window-theme = system
 macos-titlebar-style = native

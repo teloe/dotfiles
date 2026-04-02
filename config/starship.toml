@@ -106,7 +106,8 @@ $character"""
 [directory]
 format = '[󰉖 $path]($style)[$read_only]($read_only_style) '
 truncation_length = 1
-style = '#9eaaaa'
+# style = '#9eaaaa bold'
+style = '#777777 bold'
 # truncation_symbol = '…/'
 
 [character]
@@ -124,8 +125,8 @@ error_symbol = '[❯](red)'
 # style = '#89ACBB'
 # style = 'blue'
 format = "on [$symbol $branch(:$remote_branch)]($style) "
-symbol = "[](#89ACBB)"
-style = "#89ACBB"
+symbol = "[](#7587A6)"
+style = "#7587A6"
 # truncation_symbol = "⋯"
 # truncation_length = 23
 # ignore_branches = ["main", "master"]
