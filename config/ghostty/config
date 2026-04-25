@@ -22,13 +22,13 @@ foreground = b2b2b2
 
 
 #--- Fonts ---
-# font-family = Cascadia Code Light
+font-family = Cascadia Code SemiLight
 # font-family = Geist Mono
 # font-family = Spleen 12x24
 # font-family = ProFont for Powerline
 # font-family = M PLUS Code Latin 60
-# font-family = Monaspace Neon Light
-font-family = Monaspace Argon Light
+# font-family = Monaspace Neon SemiWide Light
+# font-family = Monaspace Argon Light
 # font-family = PP Model Mono
 # font-family = Operator Mono Book
 # font-family = SF Mono
@@ -53,7 +53,7 @@ font-feature = ss01
 font-feature = ss02
 
 
-# adjust-cell-width = 15%
+# adjust-cell-width = -8%
 # adjust-cell-height = 12
 
 #--- Window ---

@@ -1,6 +1,6 @@
 require("core.options") -- Load options
 require("core.keymaps") -- Load keymaps
-vim.cmd("colorscheme darker-drab") -- Set colorscheme
+vim.cmd("colorscheme duck") -- Set colorscheme
 
 -- Set up lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
