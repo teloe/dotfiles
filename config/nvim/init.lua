@@ -1,6 +1,5 @@
 require("core.options") -- Load options
 require("core.keymaps") -- Load keymaps
-vim.cmd("colorscheme duck") -- Set colorscheme
 
 -- Set up lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -27,11 +26,10 @@ require("lazy").setup({
 	require("plugins.telescope"),
 	require("plugins.lsp"),
 	require("plugins.autocompletion"),
-	-- require("plugins.snacks"),
+	require("plugins.snacks"),
 	require("plugins.indentation"),
 	require("plugins.gitsigns"),
 	require("plugins.whichkey"),
-	require("plugins.comments"),
 	require("plugins.colorizer"),
 	require("plugins.mini"),
 	require("plugins.autopairs"),
@@ -44,4 +42,5 @@ require("lazy").setup({
 	require("plugins.neogit"),
 	require("plugins.dashboard"),
 	require("plugins.surround"),
+	require("plugins.ufo"),
 })

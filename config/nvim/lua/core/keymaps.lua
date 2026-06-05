@@ -59,7 +59,7 @@ M.map("n", "b9", ":BufferGoto 9<cr>")
 
 -- COPILOT
 -- Quick chat (visual and normal)
-M.map({ "n", "v" }, "<leader>cq", function()
+M.map({ "n", "v" }, "<leader>gq", function()
 	local input = vim.fn.input("Ask: ")
 	if input ~= "" then
 		require("CopilotChat").ask("#file:" .. vim.fn.expand("%:p") .. "\n" .. input)
@@ -67,22 +67,22 @@ M.map({ "n", "v" }, "<leader>cq", function()
 end, { desc = "Copilot Quick Ask" })
 
 -- Toggle Chat
-M.map("n", "<leader>cc", function()
+M.map("n", "<leader>gc", function()
 	require("CopilotChat").toggle()
 end, { desc = "Copilot Chat" })
 
 -- Explain (visual)
-M.map("v", "<leader>ce", "<cmd>CopilotChatExplain<cr>", { desc = "Explain" })
+M.map("v", "<leader>ge", "<cmd>CopilotChatExplain<cr>", { desc = "Explain" })
 
 -- Fix (visual for selection/normal for entire file)
-M.map("v", "<leader>cf", "<cmd>CopilotChatFix<cr>", { desc = "Fix" })
-M.map("v", "<leader>co", ":CopilotChatOptimize<CR>", { desc = "Optimize" })
-M.map("n", "<leader>cF", function()
+M.map("v", "<leader>gf", "<cmd>CopilotChatFix<cr>", { desc = "Fix" })
+M.map("v", "<leader>go", ":CopilotChatOptimize<CR>", { desc = "Optimize" })
+M.map("n", "<leader>gF", function()
 	require("CopilotChat").ask("#file:" .. vim.fn.expand("%:p") .. "\nFix bugs and improve this file")
 end, { desc = "Fix File" })
 
 -- Review (file)
-M.map("n", "<leader>cr", function()
+M.map("n", "<leader>gr", function()
 	require("CopilotChat").ask("#file:" .. vim.fn.expand("%:p") .. "\nReview this code and suggest improvements")
 end, { desc = "Review File" })
 
@@ -90,6 +90,7 @@ end, { desc = "Review File" })
 M.map("n", "<c-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 M.map("n", "<Leader>h", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 M.map("n", "<Leader>t", "<cmd>lua require('telescope.builtin').colorscheme()<cr>")
+M.map("n", "<Leader>c", "<cmd>Themery<cr>")
 M.map("n", "<Leader>b", "<cmd>Telescope buffers<cr>")
 M.map("n", "<Leader>a", "<cmd>Telescope live_grep<cr>")
 

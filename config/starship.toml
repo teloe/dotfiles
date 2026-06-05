@@ -1,181 +1,86 @@
-"$schema" = 'https://starship.rs/config-schema.json'
 add_newline = false
-command_timeout = 4000
+command_timeout = 2000
 
+# Define the order of prompt modules
 format = """
-$username\
-$hostname\
-$localip\
-$shlvl\
-$singularity\
-$kubernetes\
 $directory\
-$vcsh\
-$fossil_branch\
-$fossil_metrics\
-$git_branch\
-$git_commit\
+${custom.git_branch_trimmed}\
 $git_state\
 $git_metrics\
 $git_status\
-$hg_branch\
-$pijul_channel\
-$docker_context\
-$c\
-$cmake\
-$cobol\
-$daml\
-$dart\
-$deno\
-$dotnet\
-$elixir\
-$elm\
-$erlang\
-$fennel\
-$gleam\
-$golang\
-$guix_shell\
-$haskell\
-$haxe\
-$helm\
-$java\
-$julia\
-$kotlin\
-$gradle\
-$nim\
 $nodejs\
-$ocaml\
-$opa\
-$perl\
-$php\
-$pulumi\
-$purescript\
-$python\
-$quarto\
-$raku\
-$rlang\
-$red\
-$ruby\
-$rust\
-$scala\
-$solidity\
-$swift\
-$terraform\
-$typst\
-$vlang\
-$vagrant\
-$zig\
-$buf\
-$nix_shell\
-$conda\
-$meson\
-$spack\
-$memory_usage\
-$aws\
-$gcloud\
-$openstack\
-$azure\
-$nats\
-$direnv\
-$env_var\
-$mise\
-$crystal\
-$custom\
-$sudo\
-$jobs\
-$battery\
-$status\
-$os\
-$container\
-$netns\
-$shell\
-$fill\
-$time\
-$line_break\
-$character"""
+$php
+$character\
+"""
 
-# [username]
-# show_always = true
-# style_user = 'yellow'
-# format = 'tom($style)@'
-# disabled = false
-#
-# [hostname]
-# ssh_only = false
-
+# Custom directory styling from your snippet
 [directory]
 format = '[󰉖 $path]($style)[$read_only]($read_only_style) '
 truncation_length = 1
-# style = '#9eaaaa bold'
-style = '#777777 bold'
-# truncation_symbol = '…/'
+style = 'bold white'
+read_only = " 󰌾"
+read_only_style = "red"
 
+# Minimal input character on the second line
 [character]
-success_symbol = '[❯](#c1D951)'
-# success_symbol = '[\$](#c1D951)'
-# success_symbol = '[▶](#c1D951)'
-error_symbol = '[❯](red)'
-# error_symbol = '[\$](red)'
-# error_symbol = '[▶](red)'
+success_symbol = "[❯](#4a6984)"
+error_symbol = "[❯](red)"
 
-[git_branch]
-# format =  'on [$branch(:$remote_branch)]($style) '
-# symbol = ' '
-# style = '#8585a1'
-# style = '#89ACBB'
-# style = 'blue'
-format = "on [$symbol $branch(:$remote_branch)]($style) "
-symbol = "[](#7587A6)"
-style = "#7587A6"
-# truncation_symbol = "⋯"
-# truncation_length = 23
-# ignore_branches = ["main", "master"]
-only_attached = true
+# Cuts characters 1 through 14 out completely, showing character 15 to the end
+[custom.git_branch_trimmed]
+command = "git branch --show-current 2>/dev/null | sed -E 's/^.{14}//'"
+when = "git rev-parse --is-inside-work-tree 2>/dev/null"
+style = "bright-black"
+format = "[ $output]($style)"
 
+# Git State (Rebasing, Merging, etc.)
 [git_state]
-style = 'yellow'
+style = "yellow"
+format = "([\\($state( $progress_current/$progress_total)\\)]($style))"
 
-# [git_metrics]
-# format = '[+$added]($added_style)[-$deleted]($deleted_style) '
-# added_style = 'green'
-# deleted_style = 'red'
-# disabled = false
-
-[git_status]
-format = '([$all_status$ahead_behind]($style) )'
-style = '#A17877'
-# style = 'yellow'
-ahead = '⇡${count}'
-diverged = '⇕⇡${ahead_count}⇣${behind_count}'
-behind = '⇣${count}'
-untracked = '?${count}'
-stashed = '\$'
-modified = '!${count}'
-staged = '+${count}'
-renamed = '»${count}'
-deleted = '✘${count}'
-
-[nodejs]
-# format = 'via [$symbol($version )]($style)'
-format = '[($version )]($style)'
-# symbol = ' '
-style = '#83a598'
-# style = 'green'
-# disabled = true
-
-[php]
-# format = 'via [$symbol($version )]($style)'
-format = '[($version )]($style)'
-symbol = ' '
-style = '#729fcf'
+# Git Metrics (Added/Deleted lines)
+[git_metrics]
+added_style = "green"
+deleted_style = "red"
+format = "([+$added]($added_style) [-$deleted]($deleted_style))"
 disabled = true
 
-[time]
-style = 'dimmed white'
-disabled = false
-format = '[$time]($style)'
-use_12hr = true
-time_format = '%R'
+# Git Status (with counts)
+[git_status]
+conflicted = "=${count}"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count}"
+stashed = "$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+style = "bright-cyan"
+format = "([\\[$all_status$ahead_behind\\]]($style))"
 
-[fill]
-symbol = ' '
+# Node.js version
+[nodejs]
+# symbol = " "
+style = "#3e6b5c"
+format = " [$version]($style)"
+detect_files = ["package.json", ".node-version", ".nvmrc"]
+detect_folders = ["node_modules"]
+detect_extensions = []
+
+# PHP version
+[php]
+style = "#5b82b5"
+format = " [$version]($style)"
+detect_files = ["composer.json", ".php-version"]
+detect_folders = ["vendor"]
+detect_extensions = []
+# disabled = true
+
+# Local Time
+[time]
+disabled = true
+time_format = "%H:%M:%S"
+style = "bright-black"
+format = " [at $time]($style)"

@@ -1,55 +1,92 @@
 return {
-	"kamwitsta/vinyl.nvim",
-	"mitch1000/backpack",
-	"AlexvZyl/nordic.nvim",
-	"rose-pine/neovim",
-	"rebelot/kanagawa.nvim",
-	"mcauley-penney/techbase.nvim",
-	"vague-theme/vague.nvim",
-	"valonmulolli/heap.nvim",
-	"tjdevries/colorbuddy.nvim",
-
-	lazy = false,
-	priority = 1000,
-
-	config = function()
-		require("nordic").load()
-		require("backpack").setup()
-		require("vinyl").setup()
-		require("rose-pine").setup()
-		require("kanagawa").setup({
+	{ "EdenEast/nightfox.nvim" },
+	{ "catppuccin/nvim", name = "catppuccin" },
+	{ "anhari/zorn.nvim" },
+	{ "AlexvZyl/nordic.nvim" },
+	{ "kamwitsta/vinyl.nvim" },
+	{ "mitch1000/backpack" },
+	{ "rose-pine/neovim" },
+	{
+		"rebelot/kanagawa.nvim",
+		opts = {
 			colors = {
 				palette = {
-					-- change all usages of these colors
 					sumiInk0 = "#000000",
 					fujiWhite = "#FFFFFF",
 					springGreen = "#FFFFFF",
 				},
 				theme = {
-					-- change specific usages for a certain theme, or for all of them
-					wave = {
-						ui = {
-							float = {
-								bg = "none",
-							},
-						},
-					},
-					dragon = {
-						syn = {
-							parameter = "yellow",
-						},
-					},
-					all = {
-						ui = {
-							bg_gutter = "none",
-						},
-					},
+					wave = { ui = { float = { bg = "none" } } },
+					dragon = { syn = { parameter = "yellow" } },
+					all = { ui = { bg_gutter = "none" } },
 				},
 			},
-		})
-		require("techbase").setup()
-		require("vague").setup()
-		require("heap").setup()
-		require("colorbuddy").setup()
-	end,
+		},
+	},
+	{ "mcauley-penney/techbase.nvim" },
+	{ "vague-theme/vague.nvim" },
+	{ "valonmulolli/heap.nvim" },
+	{ "tjdevries/colorbuddy.nvim" },
+	{ "ember-theme/nvim", name = "ember" },
+	{ "NopAngel/nimmy.vim" },
+	{ "ribru17/bamboo.nvim" },
+	{ "savq/melange-nvim" },
+	{ "neanias/everforest-nvim" },
+	{ "ellisonleao/gruvbox.nvim" },
+	{ "folke/tokyonight.nvim" },
+	{ "bluz71/vim-nightfly-colors", name = "nightfly" },
+	{ "ramojus/mellifluous.nvim" },
+	{ "nyoom-engineering/oxocarbon.nvim" },
+	{ "metalelf0/jellybeans-nvim", dependencies = { "rktjmp/lush.nvim" } },
+	{ "ficcdaf/ashen.nvim" },
+	{ "micdzu/aalto.nvim" },
+
+	{
+		"zaldih/themery.nvim",
+		lazy = false,
+		config = function()
+			require("themery").setup({
+				livePreview = true,
+				themes = {
+					{ name = "Kanagawa Wave", colorscheme = "kanagawa-wave" },
+					{ name = "Kanagawa Dragon", colorscheme = "kanagawa-dragon" },
+					{ name = "Kanagawa Lotus", colorscheme = "kanagawa-lotus" },
+					{ name = "Catppuccin Mocha", colorscheme = "catppuccin-mocha" },
+					{ name = "Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
+					{ name = "Catppuccin Frappe", colorscheme = "catppuccin-frappe" },
+					{ name = "Catppuccin Latte", colorscheme = "catppuccin-latte" },
+					{ name = "Terafox", colorscheme = "terafox" },
+					{ name = "Nordfox", colorscheme = "nordfox" },
+					{ name = "Nightfox", colorscheme = "nightfox" },
+					{ name = "Dayfox", colorscheme = "dayfox" },
+					{ name = "Dawnfox", colorscheme = "dawnfox" },
+					{ name = "Carbonfox", colorscheme = "carbonfox" },
+					{ name = "Rose Pine", colorscheme = "rose-pine" },
+					{ name = "Rose Pine Moon", colorscheme = "rose-pine-moon" },
+					{ name = "Rose Pine Dawn", colorscheme = "rose-pine-dawn" },
+					{ name = "Nordic", colorscheme = "nordic" },
+					{ name = "Ember", colorscheme = "ember" },
+					{ name = "Vague", colorscheme = "vague" },
+					{ name = "Zorn", colorscheme = "zorn" },
+					{ name = "Nimmy", colorscheme = "nimmy" },
+					{ name = "Bamboo", colorscheme = "bamboo" },
+					{ name = "Bamboo Multiplex", colorscheme = "bamboo-multiplex" },
+					{ name = "Bamboo Light", colorscheme = "bamboo-light" },
+					{ name = "Melange Dark", colorscheme = "melange", before = [[ vim.o.background = "dark" ]] },
+					{ name = "Everforest", colorscheme = "everforest" },
+					{ name = "Gruvbox Dark", colorscheme = "gruvbox", before = [[ vim.o.background = "dark" ]] },
+					{ name = "Tokyo Night", colorscheme = "tokyonight-night" },
+					{ name = "Tokyo Night Storm", colorscheme = "tokyonight-storm" },
+					{ name = "Tokyo Night Moon", colorscheme = "tokyonight-moon" },
+					{ name = "Tokyo Night Day", colorscheme = "tokyonight-day" },
+					{ name = "Nightfly", colorscheme = "nightfly" },
+					{ name = "Mellifluous", colorscheme = "mellifluous" },
+					{ name = "Oxocarbon", colorscheme = "oxocarbon" },
+					{ name = "Jellybeans", colorscheme = "jellybeans-nvim" },
+					{ name = "Ashen", colorscheme = "ashen" },
+					{ name = "Aalto", colorscheme = "aalto" },
+				},
+			})
+		end,
+	},
 }

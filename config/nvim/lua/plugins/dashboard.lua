@@ -1,19 +1,24 @@
+local version = vim.version()
+local version_str = string.format("NVIM v%d.%d.%d", version.major, version.minor, version.patch)
+
 return {
 	"nvimdev/dashboard-nvim",
 	event = "VimEnter",
 	dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	config = function()
-		require("dashboard").setup({
+		local db = require("dashboard")
+
+		db.setup({
 			theme = "hyper",
 			config = {
 				header = {
-					-- Font: ANSI Compact
-					"▄▄  ▄▄ ▄▄ ▄▄ ▄▄ ▄▄   ▄▄",
-					"███▄██ ██▄██ ██ ██▀▄▀██",
-					"██ ▀██  ▀█▀  ██ ██   ██",
-					"                       ",
+					"│ ╲ ││",
+					"││╲╲││",
+					"││ ╲ │",
+					"",
+					version_str,
+					"",
 				},
-
 				shortcut = {
 					{ desc = "󰊳 Update", group = "@property", action = "Lazy update", key = "u" },
 					{
@@ -48,10 +53,14 @@ return {
 					label = "Projects",
 				},
 				footer = {
-					"                     ",
+					"",
+					"",
 					"⚡️ Neovim initialized",
 				},
 			},
 		})
+
+		vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#bddcdc" })
+		vim.api.nvim_set_hl(0, "DashboardFooter", { fg = "#eeeeec" })
 	end,
 }

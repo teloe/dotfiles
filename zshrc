@@ -4,28 +4,17 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-
 export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
 
+export PATH="./node_modules/.bin:$PATH"
+
+# Add Mason binaries to PATH
+export PATH="$PATH:$HOME/.local/share/nvim/mason/bin"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-
-# ZSH_THEME="typewritten"
-# ZSH_THEME="gitsome"
-# ZSH_THEME="aphrodite"
-
-# export TYPEWRITTEN_CURSOR="block"
-# export TYPEWRITTEN_PROMPT_LAYOUT="half_pure"
-# export TYPEWRITTEN_RELATIVE_PATH="off"
-# export TYPEWRITTEN_DISABLE_RETURN_CODE=true
-# export TYPEWRITTEN_SYMBOL=""
-# export TYPEWRITTEN_SYMBOL=">"
-# export TYPEWRITTEN_ARROW_SYMBOL="on"
-# export TYPEWRITTEN_SYMBOL="#"
-# export TYPEWRITTEN_COLOR_MAPPINGS="primary:red;secondary:#b8b8b8"
 
 # Aliases
 alias c="clear"
@@ -46,9 +35,7 @@ alias d="v ~/.dotfiles/config/nvim/colors/drab.lua"
 alias dev="npm run dev"
 alias build="npm run build"
 
-# EZA
-alias e="eza -1 -a --icons --group-directories-first"
-alias el="eza -l -a -h --icons --group-directories-first --git"
+alias php-fix='php-cs-fixer fix . --config=.php-cs-fixer.dist.php'
 
 # Desktop Programs
 alias chrome="open -a google\ chrome"
@@ -154,14 +141,35 @@ source $ZSH/oh-my-zsh.sh
 
 # macchina -c blue --no-box --no-ascii --no-separator --no-bar-delimiter --bar
 
-# Set typewritten ZSH as a prompt
-# autoload -U promptinit; promptinit
-# prompt typewritten
+export EZA_ICONS_AUTO=always
+export EZA_CONFIG_DIR="$HOME/.config/eza"
+
+# General replacement for ls
+alias ls='eza --icons --group-directories-first -I "node_modules"'
+
+# Long format with extra metadata
+alias ll='eza -lh --icons --group-directories-first --git'
+
+# Show all files, including hidden ones
+alias la='eza -a --icons --group-directories-first -I "node_modules"'
+
+# Long format, all files
+alias lla='eza -alh --icons --group-directories-first --git'
+
+# Tree view (defaults to 2 levels deep)
+alias lt='eza --tree --level=2 --icons -I "node_modules"'
+
+# Tree view including hidden files
+alias lta='eza --tree --level=2 -a --icons'
 
 eval "$(starship init zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# nvm use stable
 
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+alias php-fix="php-cs-fixer fix . --config=.php-cs-fixer.dist.php"
+
+# Open lazygit
+alias g='lazygit'

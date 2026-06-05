@@ -1,28 +1,25 @@
 return {
 	"lukas-reineke/indent-blankline.nvim",
 	main = "ibl",
-	---@module "ibl"
-	---@type ibl.config
 	opts = {},
-
 	config = function()
+		local hooks = require("ibl.hooks")
+
+		-- This hook tells IBL to skip drawing on folded lines
+		hooks.register(hooks.type.SKIP_LINE, function(tick, bufnr, line)
+			return vim.fn.foldclosed(line) ~= -1
+		end)
+
 		require("ibl").setup({
 			indent = {
 				char = "│",
 				highlight = { "Whitespace" },
-				tab_char = "│",
+				-- Low priority ensures folds/other signs show over the lines
+				priority = 1,
 			},
-			whitespace = {
-				remove_blankline_trail = true,
-				highlight = { "Whitespace" },
-			},
-			scope = {
-				show_start = false,
-				show_end = false,
-			},
+			scope = { enabled = false }, -- Scopes often interfere with folds
 			exclude = {
-				filetypes = { "help", "terminal", "lazy", "packer", "TelescopePrompt", "mason" },
-				buftypes = { "nofile", "prompt" },
+				filetypes = { "help", "terminal", "lazy", "mason", "dashboard", "neogitstatus" },
 			},
 		})
 	end,
