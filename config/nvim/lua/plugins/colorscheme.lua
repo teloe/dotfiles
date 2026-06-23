@@ -40,6 +40,13 @@ return {
 	{ "metalelf0/jellybeans-nvim", dependencies = { "rktjmp/lush.nvim" } },
 	{ "ficcdaf/ashen.nvim" },
 	{ "micdzu/aalto.nvim" },
+	{ "doums/darcula" },
+	{ "xiantang/darcula-dark.nvim" },
+	{ "kvrohit/rasmus.nvim" },
+	{ "pisgahk/muted.nvim" },
+	{ "OwlfaceGames/owly.nvim" },
+	{ "jwbaldwin/oscura.nvim" },
+	{ "silverneko/tachyon.vim" },
 
 	{
 		"zaldih/themery.nvim",
@@ -85,6 +92,13 @@ return {
 					{ name = "Jellybeans", colorscheme = "jellybeans-nvim" },
 					{ name = "Ashen", colorscheme = "ashen" },
 					{ name = "Aalto", colorscheme = "aalto" },
+					{ name = "Darcula", colorscheme = "darcula" },
+					{ name = "Darcula Dark", colorscheme = "darcula-dark" },
+					{ name = "Rasmus", colorscheme = "rasmus" },
+					{ name = "Muted", colorscheme = "muted" },
+					{ name = "Owly", colorscheme = "owly" },
+					{ name = "Oscura", colorscheme = "oscura" },
+					{ name = "Tachyon", colorscheme = "tachyon" },
 				},
 			})
 		end,
