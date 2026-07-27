@@ -164,9 +164,8 @@ alias lta='eza --tree --level=2 -a --icons'
 
 eval "$(starship init zsh)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# FNM
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 alias php-fix="php-cs-fixer fix . --config=.php-cs-fixer.dist.php"
