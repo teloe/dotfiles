@@ -50,6 +50,9 @@ font-family = MonoLisa Light
 # font-family-bold= IBM Plex Mono SemiBold
 # font-family-bold-italic = JetBrains Mono Bold Italic
 
+font-style-italic = false
+font-style-bold-italic = false
+
 font-size = 18
 
 
