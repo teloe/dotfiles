@@ -1,0 +1,37 @@
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"
+# Codex CLI Global Configuration File
+# Location: ~/.codex/config.toml
+
+[desktop]
+followUpQueueMode = "steer"
+conversationDetailMode = "STEPS_PROSE"
+sansFontSize = 14
+codeFontSize = 14
+ambient-suggestions-enabled = false
+
+[approval]
+# Allows Codex to freely read and analyze files, but requires explicit
+# user confirmation before writing changes to disk or running shell commands.
+auto_approval = "read_only"
+
+[projects."/Users/Tom.Eloe/.dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/Tom.Eloe/sites/AyaWordpress/aya-healthcare-app-tier-1"]
+trust_level = "trusted"
+
+[projects."/Users/Tom.Eloe/sites/AyaWordpress/aya-healthcare-app-tier-2"]
+trust_level = "trusted"
+
+[projects."/Users/Tom.Eloe/sites/AyaWordpress/aya-healthcare-app-tier-3"]
+trust_level = "trusted"
+
+[projects."/Users/Tom.Eloe/sites/AyaWordpress/aya-healthcare-app-tier-4"]
+trust_level = "trusted"
+
+[tui]
+screen_reader_detection_done = true
+
+[tui.model_availability_nux]
+"gpt-6.1-sol" = 4

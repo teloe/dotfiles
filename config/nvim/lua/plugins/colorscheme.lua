@@ -53,6 +53,10 @@ return {
 	{ "54L1M/Oshen.nvim" },
 	{ "funnyVariable/blank.nvim" },
 	{ "marko-cerovac/material.nvim" },
+	{ "Aejkatappaja/cendre" },
+	{ "Aejkatappaja/sora" },
+	{ "cryptomilk/nightcity.nvim" },
+	{ "jonestristand/dune.nvim", name = "dune.nvim", priority = 1000 },
 
 	{
 		"zaldih/themery.nvim",
@@ -61,6 +65,10 @@ return {
 			require("themery").setup({
 				livePreview = true,
 				themes = {
+					{ name = "Dune Atreides", colorscheme = "dune-atreides" },
+					{ name = "Dune Harkonnen", colorscheme = "dune-harkonnen" },
+					{ name = "Dune Corrino", colorscheme = "dune-corrino" },
+					{ name = "Dune Fremen", colorscheme = "dune-fremen" },
 					{ name = "Kanagawa Wave", colorscheme = "kanagawa-wave" },
 					{ name = "Kanagawa Dragon", colorscheme = "kanagawa-dragon" },
 					{ name = "Kanagawa Lotus", colorscheme = "kanagawa-lotus" },
@@ -115,6 +123,10 @@ return {
 					{ name = "Material Oceanic", colorscheme = "material", before = [[ vim.g.material_style = "oceanic" ]] },
 					{ name = "Material Palenight", colorscheme = "material", before = [[ vim.g.material_style = "palenight" ]] },
 					{ name = "Material Deep Ocean", colorscheme = "material", before = [[ vim.g.material_style = "deep ocean" ]] },
+					{ name = "Cendre", colorscheme = "cendre" },
+					{ name = "Sora", colorscheme = "sora" },
+					{ name = "Night City Afterlife", colorscheme = "nightcity", before = [[ require("nightcity").setup({ style = "afterlife" }) ]] },
+					{ name = "Night City Kabuki", colorscheme = "nightcity", before = [[ require("nightcity").setup({ style = "kabuki" }) ]] },
 				},
 			})
 		end,

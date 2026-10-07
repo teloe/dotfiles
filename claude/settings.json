@@ -4,5 +4,13 @@
         "typescript-lsp@claude-plugins-official": true
     },
     "theme": "dark",
-    "model": "opus"
+    "model": "opus",
+    "attribution": {
+        "commit": "",
+        "pr": ""
+    },
+    "permissions": {
+        "allow": ["Read"],
+        "additionalDirectories": ["/Users/Tom.Eloe"]
+    }
 }

@@ -172,3 +172,9 @@ alias php-fix="php-cs-fixer fix . --config=.php-cs-fixer.dist.php"
 
 # Open lazygit
 alias g='lazygit'
+
+
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/Tom.Eloe/.local/bin:$PATH"
